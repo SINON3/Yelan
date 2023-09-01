@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('✨ Hanime Channel ✨', url='https://telegram.me/HaremHanimes')
+                InlineKeyboardButton('Hanime Channel', url='https://telegram.me/HaremHanimes')
             ],
             [
-                InlineKeyboardButton('✨ Anime Channel ✨', url=f"https://telegram.me/Anime_Nightfall"),
+                InlineKeyboardButton('Anime Channel', url=f"https://telegram.me/Anime_Nightfall"),
             ],
             [
                 InlineKeyboardButton(text=DOWNLOAD_TEXT_NAME,url=DOWNLOAD_TEXT_URL)
@@ -45,13 +45,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('ADD ME TO YOUR GROUP', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('✨ Hentai Channel ✨', url='https://telegram.me/HaremHanimes'),
-            InlineKeyboardButton('✨ Anime Channel ✨', url='https://telegram.me/Anime_Nightfall')
+            InlineKeyboardButton('Hentai Channel', url='https://telegram.me/HaremHanimes'),
+            InlineKeyboardButton('Anime Channel', url='https://telegram.me/Anime_Nightfall')
             ],[
-            InlineKeyboardButton('✨ HELP ✨', callback_data='help'),
-            InlineKeyboardButton('✨ ABOUT ✨', callback_data='about')
+            InlineKeyboardButton('HELP', callback_data='help'),
+            InlineKeyboardButton('ABOUT', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -70,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "✨ Join To Continue ✨", url=invite_link.invite_link
+                    "Join To Continue", url=invite_link.invite_link
                 )
             ]
         ]
@@ -91,13 +91,13 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('ADD ME TO YOUR GROUP', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('✨ Hentai Channel ✨', url='https://telegram.me/HaremHanimes'),
-            InlineKeyboardButton('✨ Anime Channel ✨', url='https://telegram.me/Anime_NightFall')
+            InlineKeyboardButton('Hentai Channel', url='https://telegram.me/HaremHanimes'),
+            InlineKeyboardButton('Anime Channel', url='https://telegram.me/Anime_NightFall')
             ],[
-            InlineKeyboardButton('✨ HELP ✨', callback_data='help'),
-            InlineKeyboardButton('✨ ABOUT ✨', callback_data='about')
+            InlineKeyboardButton('HELP', callback_data='help'),
+            InlineKeyboardButton('ABOUT', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -247,7 +247,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ', url='https://youtube.com/@GreyMattersYT') ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('Hanime Channel', url='https://t.me/HaremHanimes') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
